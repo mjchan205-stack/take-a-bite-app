@@ -115,13 +115,33 @@ const WelcomeScreen = ({ navigation }) => {
             </TouchableOpacity>
 
             <TouchableOpacity 
-              style={commonStyles.buttonSecondary}
+              style={[commonStyles.buttonSecondary, { marginBottom: 15 }]}
               onPress={() => navigation.navigate('OrderTracking')}
             >
               <Text style={commonStyles.buttonSecondaryText}>
                 📱 Track Your Order
               </Text>
             </TouchableOpacity>
+
+            <TouchableOpacity 
+              style={[commonStyles.button, { 
+                backgroundColor: colors.secondary,
+                marginBottom: 10 
+              }]}
+              onPress={() => navigation.navigate('AdminTabs')}
+            >
+              <Text style={commonStyles.buttonText}>
+                👨‍💼 Business Owner Login
+              </Text>
+            </TouchableOpacity>
+            
+            <Text style={[commonStyles.textSecondary, { 
+              fontSize: 12, 
+              textAlign: 'center',
+              fontStyle: 'italic'
+            }]}>
+              Access admin dashboard and manage orders
+            </Text>
           </View>
         </View>
       </ScrollView>
